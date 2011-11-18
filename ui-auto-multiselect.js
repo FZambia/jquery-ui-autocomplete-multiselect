@@ -12,7 +12,7 @@
 (function($) {
 	multitag = {
 	    options:{
-	        link:'/',
+	        source:'/',
 	        prefix:'user',
 	        value:'',
 	        delay:300,
@@ -31,7 +31,7 @@
 	        this._create_html();
 	        var self = this;
 	        e.autocomplete({
-	            source: o.link,
+	            source: o.source,
 	            minLength: o.minLength,
 	            delay:o.delay,
 	            select: function(event, ui) {

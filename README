@@ -5,11 +5,11 @@ Depends:
 
 Using:
 
-<link rel="stylesheet" type="text/css" href="/path/to/folder/multi-tag.css">
-<script type="text/javascript" src="/path/to/folder/multi-tag.js">
+<link rel="stylesheet" type="text/css" href="/path/to/folder/ui-auto-multiselect.css">
+<script type="text/javascript" src="/path/to/folder/ui-auto-multiselect.js">
 <script type="text/javascript">
     $(function() {
-        $('#example').multitag({link:'/link/to/source/of/autocomplete'})
+        $('#example').automultiselect({source:'/link/to/source/of/autocomplete'})
     })
 </script>
 
@@ -19,11 +19,11 @@ Where $('#example') just a simple text input
 
 Options:
 
-link: url to autocomplete source
-
-prefix: prefix before name of hidden field
+source: url to autocomplete source
 
 delay: delay before autocompletion
+
+prefix: prefix before name of hidden field
 
 minLength: minimal amount of characters before autocompletion
 
@@ -31,4 +31,4 @@ help: help text before or after text input
 
 help_before: boolean, if true then help text will be rendered before text input, else after input
 
-ui_style: use jQuery UI theme for rendering tags 
+ui_style: use jQuery UI theme for rendering tags

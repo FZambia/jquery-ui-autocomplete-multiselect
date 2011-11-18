@@ -10,7 +10,7 @@
  *      jquery.ui.autocomplete.js
  */
 (function($) {
-	multitag = {
+	automultiselect = {
 	    options:{
 	        source:'/',
 	        prefix:'user',
@@ -119,6 +119,6 @@
 	    }
 	}
 	
-	$.widget("ui.multitag",multitag);
+	$.widget("ui.automultiselect",automultiselect);
 	
 }(jQuery));

@@ -81,10 +81,13 @@
 					item+='</button>';
 					item+='<em title="remove" class="mt-item-delete"></em>';
 					item+='</li>';
-			} else {
+			} else if (1>0) {
 				var item ='<li style="display:none;" title="'+value+'" mt_id="'+id+'" class="fg-button ui-state-default fg-button-icon-right ui-corner-all">';
 					item+='<em title="remove" class="ui-icon ui-icon-circle-close"></em>'+value;
 					item+='</li>';	
+			} else {
+				var item = '';
+				    item += '<a title="'+value+'" class="post-tag user-tag" href="#">'+value+'<em title="remove" class="delete-tag"></em></a>';
 			}
 			var tag = $(item);
 			tag.find('em').bind('click',function(){

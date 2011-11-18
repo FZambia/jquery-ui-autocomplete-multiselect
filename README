@@ -1,0 +1,34 @@
+Widget based on jQuery UI, which combines UI autocomplete functionality with beautiful selected choices (tags)
+Depends:
+
+    * jQuery, jQuery UI autocomplete 
+
+Using:
+
+<link rel="stylesheet" type="text/css" href="/path/to/folder/multi-tag.css">
+<script type="text/javascript" src="/path/to/folder/multi-tag.js">
+<script type="text/javascript">
+    $(function() {
+        $('#example').multitag({link:'/link/to/source/of/autocomplete'})
+    })
+</script>
+
+Where $('#example') just a simple text input
+
+<input type="text" id="example" />
+
+Options:
+
+link: url to autocomplete source
+
+prefix: prefix before name of hidden field
+
+delay: delay before autocompletion
+
+minLength: minimal amount of characters before autocompletion
+
+help: help text before or after text input
+
+help_before: boolean, if true then help text will be rendered before text input, else after input
+
+ui_style: use jQuery UI theme for rendering tags 

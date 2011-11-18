@@ -1,0 +1,115 @@
+/*
+ * css of jQuery UI multitag widget
+ * 
+ */
+
+.mt-container .mt-help-text {
+	font-size:12px; 
+	font-style: italic; 
+	font-weight: normal;
+}
+.mt-container .mt-tag-block {
+    margin-bottom: 2px;
+    padding-left: 0;
+    width:500px;
+}
+.mt-container .mt-tag-block .mt-representation{
+    margin: 1px 20px 0 1px;
+    overflow: hidden;
+    padding: 1px 0 0;
+    position: relative;
+    min-height: 22px;
+}
+.mt-container .mt-tag-block ul {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+.mt-container .mt-tag-block .mt-representation ul.mt-items {
+    cursor: text;
+    font-size: 11px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* JIRA style */
+.mt-container .mt-tag-block .mt-representation ul.mt-items li.mt-item-row {
+    background: none repeat scroll 0 0 #FFFFFF;
+    cursor: default;
+    float: left;
+    padding: 2px 1px 1px 3px !important;
+    position: relative;
+}
+.mt-container .mt-tag-block .mt-representation .mt-value-item {
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    display: block;
+    float: left;
+    font-family: Arial,FreeSans,Helvetica,sans-serif;
+    height: 16px;
+    margin: 0;
+    overflow: visible;
+    padding: 0;
+    width: auto;
+}
+.mt-container .mt-tag-block .mt-representation .mt-value-item span {
+    background: url("ui-auto-multiselect.png") no-repeat scroll 100% 0 transparent;
+    color: #003366;
+    display: block;
+    font-size: 14px;
+    padding: 0;
+    position: relative;
+}
+.mt-container .mt-tag-block .mt-representation .mt-value-item span.mt-value-text {
+    background-position: 0 -16px;
+    display: block;
+    font-size: 11px;
+    height: 13px;
+    margin: 0 15px 0 0;
+    padding: 1px 0 2px 6px;
+    white-space: nowrap;
+}
+.mt-container .mt-tag-block .mt-representation ul.mt-items em.mt-item-delete{
+    cursor: pointer;
+    height: 16px;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    text-indent: -9999px;
+    top: 2px;
+    width: 16px;
+}
+
+/* jQuery UI style */
+.mt-container .mt-tag-block .fg-button {
+    margin: 0 4px 0 0;
+    outline: 0 none;
+    padding: 0.1em 0.5em;
+    position: relative;
+    text-align: center;
+    text-decoration: none !important;
+}
+.mt-container .mt-tag-block .fg-button .ui-icon {
+    cursor: pointer;
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -8px;
+    position: absolute;
+    top: 50%;
+}
+.mt-container .mt-tag-block li.fg-button {
+    float: left;
+    margin-bottom: 3px;
+}
+.mt-container .mt-tag-block button.fg-button {
+    overflow: visible;
+    width: auto;
+}
+.mt-container .mt-tag-block .fg-button-icon-right {
+    padding-right: 2.1em;
+}
+.mt-container .mt-tag-block .fg-button-icon-right .ui-icon {
+    left: auto;
+    margin-left: 0;
+    right: 0.2em;
+}

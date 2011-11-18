@@ -86,8 +86,7 @@
 					item+='<em title="remove" class="ui-icon ui-icon-circle-close"></em>'+value;
 					item+='</li>';	
 			} else {
-				var item = '';
-				    item += '<a title="'+value+'" class="post-tag user-tag" href="#">'+value+'<em title="remove" class="delete-tag"></em></a>';
+				var item = '<a title="'+value+'" mt_id="'+id+'" onclick="return false;" class="post-tag user-tag" href="#">'+value+'<em title="remove" class="delete-tag"></em></a>';
 			}
 			var tag = $(item);
 			tag.find('em').bind('click',function(){

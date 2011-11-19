@@ -1,5 +1,5 @@
 /*
- * jQuery UI Autocomplete MultiTag Widget
+ * jQuery UI Autocomplete Multiselect Widget
  *
  * developed by FZambia, 2011
  *
@@ -20,7 +20,7 @@
 	        help:'начните ввод...',
 	        help_before:true,
 	        initial:{},
-	        ui_style:false
+	        style:'default'
 	    },
 	    _create:function(){
 	        this._render();
@@ -74,25 +74,26 @@
 	    },
 	    _make_tag:function(value,id) {
 	    	var self = this;
-			if (!this.options.ui_style) {
+	    	var style = this.options.style;
+			if (style==='jira') {
 				var item ='<li style="display:none;" title="'+value+'" mt_id="'+id+'" class="mt-item-row">';
 					item+='<button class="mt-value-item" tabindex="-1" type="button">';
 					item+='<span><span class="mt-value-text">'+value+'</span></span>';
 					item+='</button>';
 					item+='<em title="remove" class="mt-item-delete"></em>';
 					item+='</li>';
-			} else if (1>0) {
+			} else if (style==='default') {
 				var item ='<li style="display:none;" title="'+value+'" mt_id="'+id+'" class="fg-button ui-state-default fg-button-icon-right ui-corner-all">';
 					item+='<em title="remove" class="ui-icon ui-icon-circle-close"></em>'+value;
 					item+='</li>';	
-			} else {
-				var item = '<a title="'+value+'" mt_id="'+id+'" onclick="return false;" class="post-tag user-tag" href="#">'+value+'<em title="remove" class="delete-tag"></em></a>';
+			} else if (style==='stackoverflow') {
+				var item = '<li title="'+value+'" mt_id="'+id+'" onclick="return false;" class="post-tag" href="#">'+value+'<em title="remove" class="delete-tag"></em></li>';
 			}
 			var tag = $(item);
 			tag.find('em').bind('click',function(){
 				self._change_list(tag.attr('mt_id'),'remove',tag);
 			})
-			if (this.options.ui_style) {
+			if (style==='default') {
 			    tag.find('em').hover(function(){
 			    	$(this).parent().addClass('ui-state-active');
 			    },function(){

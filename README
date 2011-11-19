@@ -31,4 +31,5 @@ help: help text before or after text input
 
 help_before: boolean, if true then help text will be rendered before text input, else after input
 
-ui_style: use jQuery UI theme for rendering tags
+style: defines tag style: 'default' - use jQuery UI theme for rendering tags, also supported 'jira' style and 
+       'stackoverflow' style

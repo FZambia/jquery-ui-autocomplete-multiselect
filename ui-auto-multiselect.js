@@ -75,19 +75,19 @@
 	    _make_tag:function(value,id) {
 	    	var self = this;
 	    	var style = this.options.style;
-			if (style==='jira') {
+			if (style==='default') {
 				var item ='<li style="display:none;" title="'+value+'" mt_id="'+id+'" class="mt-item-row">';
 					item+='<button class="mt-value-item" tabindex="-1" type="button">';
 					item+='<span><span class="mt-value-text">'+value+'</span></span>';
 					item+='</button>';
 					item+='<em title="remove" class="mt-item-delete"></em>';
 					item+='</li>';
-			} else if (style==='default') {
+			} else if (style==='ui') {
 				var item ='<li style="display:none;" title="'+value+'" mt_id="'+id+'" class="fg-button ui-state-default fg-button-icon-right ui-corner-all">';
 					item+='<em title="remove" class="ui-icon ui-icon-circle-close"></em>'+value;
 					item+='</li>';	
 			} else if (style==='stackoverflow') {
-				var item = '<li title="'+value+'" mt_id="'+id+'" onclick="return false;" class="post-tag" href="#">'+value+'<em title="remove" class="delete-tag"></em></li>';
+				var item = '<li title="'+value+'" mt_id="'+id+'" class="post-tag" href="#">'+value+'<em title="remove" class="delete-tag"></em></li>';
 			}
 			var tag = $(item);
 			tag.find('em').bind('click',function(){

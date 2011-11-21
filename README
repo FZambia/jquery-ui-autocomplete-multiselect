@@ -19,13 +19,13 @@ Where $('#example') just a simple text input
 
 Options:
 
-source: url to autocomplete source
+source: url to autocomplete source or structure like [{'id':'1','value':'foo'},{'id':'2','value':'bar'}]
 
 delay: delay before autocompletion
 
-prefix: prefix before name of hidden field
-
 minLength: minimal amount of characters before autocompletion
+
+prefix: prefix before name of hidden field
 
 help: help text before or after text input
 

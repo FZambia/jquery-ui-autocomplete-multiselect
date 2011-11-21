@@ -93,7 +93,7 @@
 			tag.find('em').bind('click',function(){
 				self._change_list(tag.attr('mt_id'),'remove',tag);
 			})
-			if (style==='default') {
+			if (style==='ui') {
 			    tag.find('em').hover(function(){
 			    	$(this).parent().addClass('ui-state-active');
 			    },function(){

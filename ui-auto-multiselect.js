@@ -75,14 +75,14 @@
 	    _make_tag:function(value,id) {
 	    	var self = this;
 	    	var style = this.options.style;
-			if (style==='default') {
+			if (style==='jira') {
 				var item ='<li style="display:none;" title="'+value+'" mt_id="'+id+'" class="mt-item-row">';
 					item+='<button class="mt-value-item" tabindex="-1" type="button">';
 					item+='<span><span class="mt-value-text">'+value+'</span></span>';
 					item+='</button>';
 					item+='<em title="remove" class="mt-item-delete"></em>';
 					item+='</li>';
-			} else if (style==='ui') {
+			} else if (style==='default') {
 				var item ='<li style="display:none;" title="'+value+'" mt_id="'+id+'" class="fg-button ui-state-default fg-button-icon-right ui-corner-all">';
 					item+='<em title="remove" class="ui-icon ui-icon-circle-close"></em>'+value;
 					item+='</li>';	
@@ -93,7 +93,7 @@
 			tag.find('em').bind('click',function(){
 				self._change_list(tag.attr('mt_id'),'remove',tag);
 			})
-			if (style==='ui') {
+			if (style==='default') {
 			    tag.find('em').hover(function(){
 			    	$(this).parent().addClass('ui-state-active');
 			    },function(){
